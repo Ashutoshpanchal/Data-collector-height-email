@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Collector  App</title>
+    <link href="..\static\main.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="container">
+    <h1>collecting Height</h1>
+    <h3>plz Enter the Height</h3>
+    <div class="message">
+        {{text | safe }}
+    </div>
+    <form action="{{ url_for('success') }}" method="POST" enctype="multipart/form-data">
+        <input  title="Enter your Email"   placeholder="xyz@xyz.com" type="email"  name="email_name" required > <br>
+
+        <input  title="Enter your Height"   placeholder="height in cm"  type="number" min="50"  max="300" name="height_name"required > <br>
+        <input type="file" name="file" ><br>
+        <button type="Submit">Submit</button>
+    </form>
+
+</div>
+</body>
+</html>
